@@ -1,0 +1,96 @@
+/* Menu lateral 
+-----------------------------------*/
+#menu-lateral {
+    background: #232323;
+    width: 250px;
+    padding: 20px;
+    margin: 10px 20px 0 0;
+}
+#menu-lateral ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu-lateral li {
+    list-style: none;
+    padding: 10px 0;
+}
+#menu-lateral li p {
+    font-weight: bold;
+    width: 180px;
+    line-height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    border-bottom: 3px solid white;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+}
+#menu-lateral li p:hover {
+    color: #4750ca;
+    border-bottom: 3px solid  #4750ca;
+}
+#menu-lateral li i {
+    padding-right: 10px;
+}
+
+/* seção produto 
+-----------------------------------*/
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Produto 
+-----------------------------------*/
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxProduto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px 0;
+    height: 300px;
+    width: 220px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.boxProduto .promocao {
+    font-size: 1rem;
+    color: red;
+}
+
+.boxProduto .nome-produto {
+    border-bottom: 1px solid black;
+}
+.boxProduto p {
+    padding: 3px;
+}
+.boxProduto button {
+    cursor: pointer;
+    line-height: 25px;
+    width: 150px;
+}
+
+/* Zoom imagem produto 
+-----------------------------------*/
+.imgProduto {
+    overflow: hidden;
+}
+
+.imgProduto img {
+    cursor: pointer;
+    width: 140px;
+    transition: all 0.3s;
+    z-index: 0;
+}
