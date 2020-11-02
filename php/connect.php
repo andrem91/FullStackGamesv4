@@ -6,6 +6,7 @@
 
     //Criando a conexão
     $conectar = mysqli_connect($servername, $username, $password, $database);
+    mysqli_set_charset($conectar, 'utf8');
 
     //Verificando a conexão
     if(!$conectar) {

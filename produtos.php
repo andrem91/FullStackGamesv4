@@ -49,14 +49,14 @@
                             while($rows = $result->fetch_assoc()) {
                                 
                     ?>
-                        <div class="boxProduto" id="<?php echo $rows["categoria"]; ?>">
+                        <div class="boxProduto" id="<?php echo $rows['categoria']; ?>">
                             <div class="imgProduto">
-                                <img src="<?php echo $rows["imagem"]; ?>" onclick=destaque(this) onmouseover="aumentarImagem(this)" onmouseout="diminuirImagem(this)">
+                                <img src="<?php echo $rows['imagem']; ?>" onclick=destaque(this) onmouseover="aumentarImagem(this)" onmouseout="diminuirImagem(this)">
                             </div>
                             <div class="descricaoProduto">
-                                <p class="nome-produto"><?php echo $rows["produto"]; ?></p>
-                                <p class="valor-inteiro"><strike>R$ <?php echo $rows["preco"]; ?></strike></p>
-                                <p class="promocao">R$ <?php echo $rows["preco_venda"]; ?></p>
+                                <p class="nome-produto"><?php echo $rows['produto']; ?></p>
+                                <p class="valor-inteiro"><strike>R$ <?php echo $rows['preco']; ?></strike></p>
+                                <p class="promocao">R$ <?php echo $rows['preco_venda']; ?></p>
                             </div>
                             <div class="botaoProduto">
                                 <button>Detalhes</button>

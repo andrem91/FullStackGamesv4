@@ -1,4 +1,14 @@
-<?php
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - Full Stack Games</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/contato.css">
+        <?php
     require("php/connect.php");
 
     if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['mensagem'])) {
@@ -12,15 +22,6 @@
         $result = $conectar->query($sql);
     }
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contato - Full Stack Games</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/contato.css">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
