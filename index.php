@@ -1,60 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Full Stack Games</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/home.css">
 
-    </head>
-    <body>
-        <!-- Inicio do cabecalho -->
         <?php
-            include('./html/header.html');
+            include('./html/cabecalho.html');
+            include('./html/menu.html');
         ?>
-        <!-- /Fim do cabecalho -->
-        <main id="home">
-            <h2>Seja bem vindo(a)!</h2>
-            <section>
-                <p>Aqui na FullStack Games, <strong>programadores tem desconto</strong> nos produtos do site!</p>
-                <!-- Slideshow -->
-                <div class="slideContainer">
-                    <div class="imgSlides fade">
-                        <div class="numero">1 / 3</div>
-                        <img src="./img/tela-inicial01-slide.jpg">
-                        <div class="texto">Os melhores jogos e lançamentos de todas as plataformas de games estão aqui.</div>
-                    </div>
-                    <div class="imgSlides">
-                        <div class="numero">2 / 3</div>
-                        <img src="./img/tela-inicial02-slide.jpg">
-                        <div class="texto">Jogos classicos e nostalgicos é diversão garantida para toda a família!</div>
-                    </div>
-                    <div class="imgSlides">
-                        <div class="numero">3 / 3</div>
-                        <img src="./img/tela-inicial03-slide.jpg">
-                        <div class="texto">Não perca o lançamento do mais novo console da Sony. O Incrivel playstation 5!!</div>
-                    </div>
+        <div class="container">
+            <h2 class="border-bottom py-4">Seja bem vindo(a)!</h2>
 
-                    <a class="esquerda" onclick="rolarSlides(-1)">&#10094;</a>
-                    <a class="direita" onclick="rolarSlides(1)">&#10095;</a>
+            <!-- Slideshow -->
+            <div id="carouselExampleInterval" class="carousel slide mb-3" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="10000">
+                        <img src="./img/tela-inicial01-slide.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Sejam bem vidos ao FullStackGames!!</h5>
+                            <p>Aqui na FullStack Games, <strong>programadores tem desconto</strong> nos produtos do site!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="./img/tela-inicial02-slide.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Jogos classicos</h5>
+                            <p>É nostalgia sem limites! Temos uma grande variedades de jogos classicos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/tela-inicial03-slide.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lançamento do ano!!</h5>
+                            <p>O console mais esperado do ano você encontra aqui na FullStackGames!</p>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <div class="circulos">
-                    <span class="circulo" onclick="escolherSlide(1)"></span>
-                    <span class="circulo" onclick="escolherSlide(2)"></span>
-                    <span class="circulo" onclick="escolherSlide(3)"></span>
-                </div>
-            </section>
-            
-        </main>
-        <!-- Inicio do rodape -->
-        <?php
-            include('./html/footer.html')
-        ?>
-        <!-- /Fim do rodape -->
-        <script src="./js/slideShow.js"></script>
+                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
 
-    </body>
-</html>
+            <!-- Inicio do rodape -->
+            <?php
+                include('./html/footer.html')
+            ?>
+            <!-- /Fim do rodape -->
 
