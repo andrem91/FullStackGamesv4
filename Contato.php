@@ -31,8 +31,9 @@
         ?>
         <!-- /Fim do cabecalho -->
         <main class="container">
-            <h2 class="border-bottom py-4">Contato</h2>
+            <h2 class="border-bottom py-4">Pedido</h2>
             <div class="mb-4">
+                <h4>Faça seu pedido pelo whatsapp, email ou preencha o formulário que entraremos em contato em breve.</h4>
                 <div>
                     <a class="text-white" href="mailto:contato@fullstackgames.com.br"><i class="far fa-envelope fa pr-2"></i>contato@fullstackgames.com.br</a>
                 </div>
@@ -41,7 +42,7 @@
                     <a class="text-white" href="tel:11999999999"><i class="fab fa-whatsapp fa pr-2"></i>(11) 99999-9999</a>
                 </div>
             </div>
-            <h3>Deixe sua mensagem</h3>
+            <h3>Formulário de pedidos: </h3>
             <form>
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -52,11 +53,11 @@
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Telefone</label>
+                    <label for="telefone">Telefone: </label>
                     <input type="number" class="form-control" id="telefone" name="telefone">
                 </div>
                 <div class="form-group">
-                    <label for="mensagem">Example textarea</label>
+                    <label for="mensagem">Mensagem: </label>
                     <textarea class="form-control" id="mensagem" name="mensagem" rows="3"></textarea>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary btn-block">Enviar</button>
