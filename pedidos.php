@@ -12,22 +12,10 @@
         $result = $conectar->query($sql);
     }
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contato - Full Stack Games</title>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/9626911983.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
         <!-- Inicio do cabecalho -->
         <?php
             include('./html/cabecalho.html');
-            include('./html/menu.html')
+            include('./html/menu.html');
         ?>
         <!-- /Fim do cabecalho -->
         <main class="container">
@@ -43,7 +31,7 @@
                 </div>
             </div>
             <h3>Formulário de pedidos: </h3>
-            <form>
+            <form method="POST">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" class="form-control" id="nome" name="nome">
@@ -65,7 +53,6 @@
 
             <div id="comentarios">
                 <h3 class="mt-5">Mensagens:</h3>
-
                 <?php
                     $sql = "select * from comentarios";
                     $result = $conectar->query($sql);

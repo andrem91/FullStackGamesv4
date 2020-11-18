@@ -1,9 +1,4 @@
 <?php
-    include_once ('php/actions/connect.php');
-?>
-
-
-<?php
     include('./html/cabecalho.html');
     include('./html/menu.html');
 ?>
@@ -46,20 +41,24 @@
 
                     <div class="row">
                         <?php
-                            $produtos = "select * from produtos";
-                            $result = $conectar->query($produtos);
-                        
-                            if($result->num_rows > 0) {
-                                while($rows = $result->fetch_assoc()) {  
+                            $dados_json = file_get_contents("http://fullstackgamesv5/php/actions/getContent.php?table=produtos");
+
+
+                            $dados = json_decode($dados_json, true);
+                            //print_r($dados);
+
+                            foreach($dados as $key => $row) {
+                                //print_r($row);
+
                         ?>
-                        <div class="boxProduto col-lg-4 col-md-6 mb-4 text-dark" id="<?php echo $rows['categoria'];?>">
+                        <div class="boxProduto col-lg-4 col-md-6 mb-4 text-dark" id="<?php echo $row['categoria'];?>">
                             <div class="card h-100">
-                                <span class="text-center mt-2 pointer"><img class="img card-img-top" src="<?php echo $rows['imagem']; ?>" alt="" style="width: 200px; margin-bottom: 40px;" onmouseover="aumentarImagem(this)" onmouseout="diminuirImagem(this)"></span>
+                                <span class="text-center mt-2 pointer"><img class="img card-img-top" src="<?php echo $row['imagem']; ?>" alt="" style="width: 200px; margin-bottom: 40px;" onmouseover="aumentarImagem(this)" onmouseout="diminuirImagem(this)"></span>
                                 <div class="card-body">
-                                    <p class="card-title"><?php echo $rows['produto']; ?></p>
+                                    <p class="card-title"><?php echo $row['produto']; ?></p>
                                     <div class="card-text">
-                                        <h6 class="text-danger"><del>R$ <?php echo $rows['preco']; ?></del></h6>
-                                        <h5>R$ <?php echo $rows['preco_venda']; ?></h5>
+                                        <h6 class="text-danger"><del>R$ <?php echo $row['preco']; ?></del></h6>
+                                        <h5>R$ <?php echo $row['preco_venda']; ?></h5>
                                     </div>
                                 </div>
                                 <div class="card-footer">
@@ -69,9 +68,6 @@
                         </div>
                         <?php
                             }
-                        } else {
-                            echo "Nenhum produto cadastrado";
-                        }
                         ?>
                     </div>
                 </div>
